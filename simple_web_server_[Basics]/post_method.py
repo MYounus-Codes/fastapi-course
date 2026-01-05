@@ -11,6 +11,8 @@ app = FastAPI()
 async def create_book(book: CreateBook) -> dict:
     return {"message": f"Book '{book.title}' by {book.author} created successfully!"}
 
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="localhost", port=8003)
